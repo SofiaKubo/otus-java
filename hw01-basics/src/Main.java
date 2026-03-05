@@ -1,6 +1,31 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Выберите метод (1-5):");
+        int choice = scanner.nextInt();
 
+        switch (choice) {
+            case 1:
+                greetings();
+                break;
+            case 2:
+                checkSign(3, 6, -18);
+                break;
+            case 3:
+                selectColor();
+                break;
+            case 4:
+                compareNumbers(8, 3);
+                break;
+            case 5:
+                addOrSubtractAndPrint(5, 2, true);
+                break;
+            default:
+                System.out.println("Такого метода нет.");
+        }
+        scanner.close();
     }
 
     private static void greetings() {
@@ -13,7 +38,7 @@ public class Main {
     private static void checkSign(int a, int b, int c) {
         int sum = a + b + c;
         System.out.println(
-                sum >= 0 ? "Сумма положительная" : "Сумма отрицательная");
+                sum >= 0 ? "Сумма положительная." : "Сумма отрицательная.");
     }
 
     private static void selectColor() {
