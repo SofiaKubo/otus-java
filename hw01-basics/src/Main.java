@@ -11,16 +11,20 @@ public class Main {
                 greetings();
                 break;
             case 2:
-                checkSign(3, 6, -18);
+                System.out.println("Введите a, b, c:");
+                checkSign(scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
                 break;
             case 3:
-                selectColor();
+                System.out.println("Введите data:");
+                selectColor(scanner.nextInt());
                 break;
             case 4:
-                compareNumbers(8, 3);
+                System.out.println("Введите a, b:");
+                compareNumbers(scanner.nextInt(), scanner.nextInt());
                 break;
             case 5:
-                addOrSubtractAndPrint(5, 2, true);
+                System.out.println("Введите initValue, delta, increment (true/false):");
+                addOrSubtractAndPrint(scanner.nextInt(), scanner.nextInt(), scanner.nextBoolean());
                 break;
             default:
                 System.out.println("Такого метода нет.");
